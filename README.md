@@ -1,7 +1,6 @@
 # SYNOPSIS
-Bash has no ternary operator and if-statements do not read clearly inside a 
-`package.json`. This program helps test environment variables and create
-conditional output.
+Bash programming does not read clearly inside a `package.json` script field. 
+This program helps test environment variables and create conditional output.
 
 # EXAMPLE
 `package.json` scripts likely want some context about their environment. In 
