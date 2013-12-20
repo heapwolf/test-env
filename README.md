@@ -56,6 +56,6 @@ Yep
 ```
 
 ```bash
-$test-env SHLVL >= 1 Tak Niet
+$test-env SHLVL >= 1 Tak Nie
 Tak
 ```
