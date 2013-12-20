@@ -1,0 +1,12 @@
+{
+  "name": "test-env",
+  "bin": "./index.js",
+  "version": "1.0.0",
+  "description": "Conditional output based on an environment variable",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test.js"
+  },
+  "author": "hij1nx",
+  "license": "MIT"
+}
