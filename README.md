@@ -16,27 +16,26 @@ been set.
 
 # USAGE
 ## TESTING
-If the variable exists, `Yes` will be written to `stdout`. If not, nothing will be output. 
-If the test is false, and a third variable is supplied it will be printed.
+If the variable exists, the second argument will be written to `stdout`. If the test is false, 
+and a third variable is supplied it will be printed.
 
 ```bash
-$test-env VARIABLE_NAME "Yes"
+$test-env VARIABLE_NAME Yes
 ```
 
 ```bash
-$test-env VARIABLE_NAME "Yes" "No"
+$test-env VARIABLE_NAME Yep Nope
 ```
 
-If the variable does not exist, `Yes` will be written to `stdout`. If it does exist, 
-nothing will be output. If the test is false, and a third variable is supplied it will be 
-printed.
+If the variable does not exist, the second argument will be written to `stdout`. If the test 
+is false, and a third variable is supplied it will be printed.
 
 ```bash
-$test-env !USER "Yes"
+$test-env !USER "Yeah ok, sure"
 ```
 
 ```bash
-$test-env !USER "Yes" "No"
+$test-env !USER 1 2
 ```
 
 ## COMPARING
