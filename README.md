@@ -50,6 +50,6 @@ Yep
 ```
 
 ```bash
-$test-env SHLVL gte 1 Tak Nie
-Tak
+$test-env SHLVL gte 1 OK NOTOK
+OK
 ```
