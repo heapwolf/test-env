@@ -16,21 +16,26 @@ been set.
 
 # USAGE
 ## TESTING
-Truthy Variables. If the test is truthy, `Yes` will be written to `stdout`. If 
-the test is falsy, nothing will be output. If the test is false, and a third 
-variable is supplied it will be printed.
+If the variable exists, `Yes` will be written to `stdout`. If not, nothing will be output. 
+If the test is false, and a third variable is supplied it will be printed.
 
 ```bash
 $test-env VARIABLE_NAME "Yes"
+```
+
+```bash
 $test-env VARIABLE_NAME "Yes" "No"
 ```
 
-Falsy Variables. If the test is falsy, `Yes` will be written to `stdout`. If
-the test is falsy, nothing will be output. If the test is false, and a third
-variable is supplied it will be printed.
+If the variable does not exist, `Yes` will be written to `stdout`. If it does exist, 
+nothing will be output. If the test is false, and a third variable is supplied it will be 
+printed.
 
 ```bash
 $test-env !USER "Yes"
+```
+
+```bash
 $test-env !USER "Yes" "No"
 ```
 
