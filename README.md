@@ -1,4 +1,4 @@
-![build-status](https://www.codeship.io/projects/50ca8900-4c7b-0131-1043-328a0651e296/status)
+[![build-status](https://www.codeship.io/projects/50ca8900-4c7b-0131-1043-328a0651e296/status)](https://www.codeship.io/projects/11256)
 
 # SYNOPSIS
 Bash programming does not read clearly inside a `package.json` script field. 
