@@ -1,3 +1,5 @@
+![build-status](https://www.codeship.io/projects/50ca8900-4c7b-0131-1043-328a0651e296/status)
+
 # SYNOPSIS
 Bash has no ternary operator and if-statements do not read clearly inside a 
 `package.json`. This program helps test environment variables and create
