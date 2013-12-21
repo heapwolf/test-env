@@ -1,9 +1,8 @@
 ![build-status](https://www.codeship.io/projects/50ca8900-4c7b-0131-1043-328a0651e296/status)
 
 # SYNOPSIS
-Bash has no ternary operator and if-statements do not read clearly inside a 
-`package.json`. This program helps test environment variables and create
-conditional output.
+Bash programming does not read clearly inside a `package.json` script field. 
+This program helps test environment variables and create conditional output.
 
 # EXAMPLE
 `package.json` scripts likely want some context about their environment. In 
@@ -19,26 +18,30 @@ been set.
 
 # USAGE
 ## TESTING
-Truthy Variables. If the test is truthy, `Yes` will be written to `stdout`. If 
-the test is falsy, nothing will be output. If the test is false, and a third 
-variable is supplied it will be printed.
+If the variable exists, the second argument will be written to `stdout`. If the test is false, 
+and a third variable is supplied it will be printed.
 
 ```bash
-$test-env VARIABLE_NAME "Yes"
-$test-env VARIABLE_NAME "Yes" "No"
+$test-env VARIABLE_NAME Yes
 ```
 
-Falsy Variables. If the test is falsy, `Yes` will be written to `stdout`. If
-the test is falsy, nothing will be output. If the test is false, and a third
-variable is supplied it will be printed.
+```bash
+$test-env VARIABLE_NAME Yep Nope
+```
+
+If the variable does not exist, the second argument will be written to `stdout`. If the test 
+is false, and a third variable is supplied it will be printed.
 
 ```bash
-$test-env !USER "Yes"
-$test-env !USER "Yes" "No"
+$test-env !USER "Yeah ok, sure"
+```
+
+```bash
+$test-env !USER 1 2
 ```
 
 ## COMPARING
-The comparison operators for equality are supported
+The comparison operators are supported
 
  - `==` (or `eq`) Equal
  - `!=` (or `not`) Not Equal
@@ -47,18 +50,12 @@ The comparison operators for equality are supported
  - `gte` Greater Than or Equal To
  - `lte` Less Than or Equal To
 
-### More examples
-```bash
-$test-env USER "Yes"
-Yes
-```
-
 ```bash
 $test-env SHLVL == 2 Yep Nope
 Yep
 ```
 
 ```bash
-$test-env SHLVL >= 1 Tak Niet
-Tak
+$test-env SHLVL gte 1 OK "NOT OK"
+OK
 ```
