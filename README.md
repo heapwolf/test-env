@@ -35,7 +35,7 @@ $test-env !USER "Yes" "No"
 ```
 
 ## COMPARING
-The comparison operators for equality are supported
+The comparison operators are supported
 
  - `==` (or `eq`) Equal
  - `!=` (or `not`) Not Equal
@@ -44,18 +44,12 @@ The comparison operators for equality are supported
  - `gte` Greater Than or Equal To
  - `lte` Less Than or Equal To
 
-### More examples
-```bash
-$test-env USER "Yes"
-Yes
-```
-
 ```bash
 $test-env SHLVL == 2 Yep Nope
 Yep
 ```
 
 ```bash
-$test-env SHLVL >= 1 Tak Nie
+$test-env SHLVL gte 1 Tak Nie
 Tak
 ```
