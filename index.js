@@ -30,13 +30,13 @@ module.exports = function(args) {
   }
   else {
 
-    var variable = args[1]
-    var truthy = args[2] || ''
-    var falsy = args[3] || ''
+    var variable = args[0]
+    var truthy = args[1] || ''
+    var falsy = args[2] || ''
 
     if (variable[0] == '!') {
-      variable.splice(0, 1)
-      return process.env[variable] ? falsy : truthy
+      variable = variable.slice(1)
+      return !process.env[variable] ? truthy : falsy
     }  
     return process.env[variable] ? truthy : falsy
   }
